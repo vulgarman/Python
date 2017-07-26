@@ -3,6 +3,7 @@
 import requests
 # 导入requests的模块，该模块
 import codecs
+
 zhuanqu = requests.get('http://cuiqingcai.com')
 print zhuanqu.encoding
 print zhuanqu.cookies
