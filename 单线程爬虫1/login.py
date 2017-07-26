@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
 # 默认开头，声明本.py文件中的所有编码都是utf-8.
 import requests
-# 导入requests的模块，该模块
+# 导入requests模块，该模块
 import codecs
-
+#导入codecs模块，
 zhuanqu = requests.get('http://cuiqingcai.com')
 print zhuanqu.encoding
 print zhuanqu.cookies
