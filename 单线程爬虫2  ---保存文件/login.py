@@ -3,8 +3,7 @@
 import requests
 # 导入requests模块，该模块
 import codecs
-
-# 导入codecs模块，解决编码问题
+# 导入codecs模块，解决打开txt编码问题
 zhuanqu = requests.get('http://cuiqingcai.com')
 #抓取所有web内容
 print zhuanqu.encoding
