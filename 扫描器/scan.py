@@ -27,4 +27,22 @@ def main():
                 'does not exist.'
             exit(0)
         if not os.access(filename, os.R_OK):
+            print '[-] ' +filename +\
+                ' access denied.'
+            exit(0)
+    # else:
+    #     print '[-] Usage: ' +str(sys.argv[0]) +\
+    #           '<vuln filename>'
+    #         exit(0)
+        portList = [21,22,25,80,110,443]
+        for x in range(119,255):
+            ip = '192.168.0.' +str(x)
+            for port in portList:
+                banner = retBanner(ip, port)
+
+                if banner:
+                    print '[+] ' +ip + ' -- '+str(port) +': ' +banner
+                    checkVulns(banner, filename)
+if __name__ == '__main__':
+    main()
 
