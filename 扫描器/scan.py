@@ -39,10 +39,11 @@ def main():
             ip = '192.168.0.' +str(x)
             for port in portList:
                 banner = retBanner(ip, port)
-
                 if banner:
-                    print '[+] ' +ip + ' -- '+str(port) +': ' +banner
+                    print '[+] ' +ip + ':'+str(port) + '  ' +banner
                     checkVulns(banner, filename)
+                else:
+                    print '[-] ' +ip + ':'+str(port) + '  not opend'
 if __name__ == '__main__':
     main()
 
