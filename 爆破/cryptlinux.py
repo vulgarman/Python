@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-import hashlib
+#将本文和wordlist.txt仍到linux机器上运行即可。
 import crypt
-
 def pojie(salt,hash):
     wordlist  =open("wordlist.txt","r")
     for word in wordlist:
@@ -14,7 +13,6 @@ def pojie(salt,hash):
             return
     print "[-]字典中没有匹配的密码，请更新字典.\n"
     return
-
 def main():
     passFile =open('/etc/shadow','r')
     for line in passFile.readlines():
@@ -38,6 +36,5 @@ def main():
                     print "加的盐为： " +salt
                     print "[+] Cracking password for: " +user
                     pojie(salt, password)
-
 if __name__ == '__main__':
     main()
