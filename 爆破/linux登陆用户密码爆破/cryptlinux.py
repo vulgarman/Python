@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#将本文和wordlist.txt仍到linux机器上运行即可。
+#将本文件和wordlist.txt仍到linux机器上运行即可。
 import crypt
 def pojie(salt,hash):
     wordlist  =open("wordlist.txt","r")
