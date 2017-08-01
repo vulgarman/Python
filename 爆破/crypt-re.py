@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 #请注意  crypt模块仅支持linux平台，所以win下无法运行
 #请注意  txt中win下和linux下的不同。
+'''
+pycharm中import的路径优先选择本项目文件夹目录。
+所以如果本项目中的文件名称有跟python模块名称相同且在项目中调用该模块时候。
+就悲剧了，就会产生各种奇怪的问题，所以命名一定要注意
+'''
 import crypt
 
 def testPass(cryptPass):
