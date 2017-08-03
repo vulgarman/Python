@@ -26,8 +26,11 @@ def portScan(tgtHost, tgtPorts):
     except:
         print '\n[+] Scan Results for: ' +tgtIP
     setdefaulttimeout(1)
+    print type(tgtPorts)
+    print tgtPorts
     for tgtPort in tgtPorts:
         print 'Scanning port ' + tgtPort
+        print 'tgtport is is is: ' +tgtPort
         connScan(tgtHost, int(tgtPort))
 
 def main():
@@ -45,14 +48,17 @@ def main():
 
     tgtHost = options.tgtHost
 
-    # print "host is: " + tgtHost
-    # a = options.tgtPort
-    # print "a is： " + a
-    # b = a.split(', ')
-    # print 'b is: ' + b
+    # print type(tgtHost)
 
+    # print "tgtHost is is is is: " + tgtHost
 
     tgtPorts = str(options.tgtPort).split(', ')
+    print type(tgtPorts)
+
+    print tgtPorts
+    # print 'tgtPosts is is is: ' + tgtPorts
+    # for i in tgtPorts:
+    #     print "tgtPost is is is is: " + i
 
     if (tgtHost == None) | (tgtPorts[0] ==None):
         print '[-] You must specify a target host and port[s].'
