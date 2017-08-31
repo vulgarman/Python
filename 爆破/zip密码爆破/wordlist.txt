@@ -1,0 +1,5 @@
+root
+niqusi
+file
+12345
+123456
